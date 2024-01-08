@@ -1,0 +1,44 @@
+{
+    "name": "aportela/re-forms",
+    "type": "project",
+    "config": {
+        "sort-packages": true,
+        "process-timeout": 0
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.46",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.5"
+    },
+    "license": "GPL-3.0-only",
+    "autoload": {
+        "psr-4": {
+            "ReForms\\": "ReForms"
+        }
+    },
+    "authors": [
+        {
+            "name": "alex",
+            "email": "766f6964+github@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/aportela/re-forms",
+    "require": {
+        "php": ">=8.0",
+        "aportela/db-browser-wrapper": "^1.0",
+        "aportela/db-wrapper": "^2.0",
+        "firebase/php-jwt": "^6.10",
+        "monolog/monolog": "^3.5",
+        "php-di/php-di": "^7.0",
+        "ramsey/uuid": "^4.7",
+        "slim/psr7": "^1.6",
+        "slim/slim": "^4.12",
+        "slim/twig-view": "^3.3"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox",
+        "fix" : "vendor/bin/php-cs-fixer fix ReForms",
+        "stan": "vendor/bin/phpstan analyse -c phpstan.neon",
+        "start": "php -S 127.0.0.1:8081 -t public public/cliserver.php"
+    }
+}
